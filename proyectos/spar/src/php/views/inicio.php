@@ -5,9 +5,7 @@
             <!-- Aquí va el código HTML para la barra lateral -->
             <h2>Barra lateral</h2>
             <ul>
-                <li><a href="#">Enlace 1</a></li>
-                <li><a href="#">Enlace 2</a></li>
-                <li><a href="#">Enlace 3</a></li>
+                <li><a href="index.php?controller=productos&action=productos">productos</a></li>
             </ul>
         </aside>
         

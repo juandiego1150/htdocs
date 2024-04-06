@@ -11,4 +11,7 @@ class Controladorproductos{
     public function inicio() {
         $this->view = "inicio";
     }
+    public function productos() {
+        $this->view = "productos";
+    }
 }
