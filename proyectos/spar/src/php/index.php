@@ -1,39 +1,105 @@
-<?php
-require_once 'config/config.php';
+<!DOCTYPE html>
+<html>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
+<head>
+    <title>Mi página web</title>
+    <style>
+        /* CSS styles go here */
+        header {
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
 
-    // Configuración por defecto
-    $controladorPorDefecto = constant("ControladorporDefecto");
-    $metodoPorDefecto = constant("MetodoporDefecto");
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
 
-    // Verificar y asignar valores a $_GET del controlador y método
+        main {
+            display: flex;
+            justify-content: space-between;
+        }
 
-    if(!isset($_GET["controller"])){
-        $_GET["controller"] = constant("ControladorporDefecto");
-    }
+        aside {
+            width: 30%;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
 
-    if(!isset($_GET["action"])) {
-        $_GET["action"] = constant("MetodoporDefecto");
-    }
+        article {
+            width: 60%;
+            background-color: #fff;
+            padding: 10px;
+        }
 
-    // Construir la ruta del controlador
-    $rutaControlador = 'controllers/' . $_GET["controller"] . '.php';
-    
-    // Verificar si el controlador existe, si no usa el por defecto
-    if (!file_exists($rutaControlador)) {
-        $rutaControlador = 'controllers/' . $controladorPorDefecto . '.php';
-    }
+        section {
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
 
-    // Cargar el controlador
-    require_once $rutaControlador;
-    $controladorNombre = 'Controlador' . $_GET["controller"];
-    $controlador = new $controladorNombre();
+        div {
+            background-color: #fff;
+            padding: 10px;
+        }
 
-    // Llamada al metodo y guarda los datos en $retornado   
-        $retornado = $controlador->{$_GET["action"]}();
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        encabezado
+    </header>
 
-    // Cargar las vistas
-    require_once 'views/templates/header.php';
-    require_once 'views/' . $controlador->view . '.php';
-    require_once 'views/templates/footer.php';
+    <nav>
+         Menú de navegación 
+    </nav>
 
-?>
+    <main>
+        <aside>
+            Barra lateral
+        </aside>
+
+        <article>
+            Contenido del artículo
+        </article>
+
+        <section>
+            Contenido de la sección
+        </section>
+
+        <div>
+            Contenido del div
+        </div>
+    </main>
+        <div id="productos"></div>
+    <footer>
+        Pie de página
+    </footer>
+</body>
+</html>
+<script>
+    // JavaScript code goes here
+    $(document).ready(function() {
+        $.ajax({
+        type: "POST",
+        url: "controllers/productos.php",
+        dataType: "Text",
+        data: {
+          option: 1
+        },
+
+        success: function(a) {
+
+            $("#productos").html(a);
+
+
+        }
+
+      });
+    });
+</script>
