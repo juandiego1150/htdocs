@@ -3,10 +3,11 @@ $options = filter_input(INPUT_POST, "option", FILTER_SANITIZE_NUMBER_INT);
 switch ($options) {
     case 1:
         require_once '../models/productos.php';
-        $productos = productos::listarProductos();
+        $productos = Productos::listarProductos();
+        
        
         ?>
-
+<div id="vistaProductos">
 <table class="tablaProductos">
             <thead>
                 <tr>
@@ -25,8 +26,11 @@ switch ($options) {
                 <?php endforeach; ?>
             </tbody>
         </table>
+        </div>
         <?php
         break;
+    case 2:
+        
 }
 
     

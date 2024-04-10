@@ -1,5 +1,5 @@
 <?php
-class productos
+class Productos
 {
     public static function listarProductos()
     {
