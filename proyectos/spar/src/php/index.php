@@ -4,14 +4,16 @@
     <title>Mi página web</title>
     <link rel="stylesheet" type="text/css" href="css/barralateral.css">
     <link rel="stylesheet" type="text/css" href="css/productos.css"> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
    <style>
-    #productos {
-        display: none;
-    }
+ 
    </style>
 </head>
 <body>
+    <header>
+        <div id="barraUtilidades"></div>
+    </header>
     <main>
     <div class="area"></div><nav class="main-menu">
             <ul> <li id="spar">
@@ -61,7 +63,7 @@
                     </a>
                    
                 </li>
-                <li>
+                <li id="adimistrador">
                    <a href="#">
                        <i class="fa fa-cogs fa-2x"></i>
                         <span class="nav-text">
@@ -86,8 +88,8 @@
                     </a>
                 </li>
             </ul>
-            <ul class="register" id="register">
-                <li>
+            <ul class="register">
+                <li id="register">
                    <a href="#">
                          <i class="fa fa-power-off fa-2x"></i>
                         <span class="nav-text">
@@ -97,7 +99,7 @@
                 </li>  
             </ul>
             <ul class="logout">
-                <li>
+                <li id="cerrarSesion">
                    <a href="#">
                          <i class="fa fa-power-off fa-2x"></i>
                         <span class="nav-text">
@@ -107,16 +109,67 @@
                 </li>  
             </ul>
         </nav>
-
     </main>
     <div id="contenido">
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
+        <h1>Bienvenido a la página web de SPAR</h1>
+        <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
         <h1>Bienvenido a la página web de SPAR</h1>
         <p>En esta página web podrás encontrar información sobre los productos que vendemos en nuestra tienda.</p>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // JavaScript code goes here
-        $(document).ready(function() {
+        // JavaScript 
+    $(document).ready(function() {
             
             $("#spar").click(function() {
                 window.location.href = "index.php";
@@ -135,25 +188,54 @@
                     animateContent();
                 }
             });
-            $("#register").click(function() {
-                $.ajax({
-                    type: "POST",
-                    url: "controllers/usuarios.php",
-                    dataType: "Text",
-                    data: {
-                        option: 2
-                    },
-                    success: function(a) {
-                        $("#contenido").html(a);
-                        animateContent();
-                    }
-                });
-            });
-            function animateContent() {
-                $("#contenido").fadeIn(1000);
-                
-            }
         });
+        $("#register").click(function() {
+            $.ajax({
+                type: "POST",
+                url: "controllers/usuarios.php",
+                dataType: "Text",
+                data: {
+                    option: 1
+                },
+                success: function(a) {
+                    $("#contenido").html(a);
+                    animateContent();
+                }
+            });
+        });
+        $("#adimistrador").click(function() {
+            $.ajax({
+                type: "POST",
+                url: "controllers/usuarios.php",
+                dataType: "Text",
+                data: {
+                    option: 3
+                },
+                success: function(a) {
+                    $("#contenido").html(a);
+                    animateContent();
+                }
+            });
+        });
+        $("#cerrarSesion").click(function() {
+            $.ajax({
+                type: "POST",
+                url: "controllers/usuarios.php",
+                dataType: "Text",
+                data: {
+                    option: 5
+                },
+                success: function(a) {
+                    alert(a);
+                    animateContent();
+                }
+            });
+        });
+        function animateContent() {
+            $("#contenido").fadeIn(1000);
+        }
+        
+        
     });
     </script>
 </body>

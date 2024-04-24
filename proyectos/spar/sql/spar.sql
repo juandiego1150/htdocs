@@ -9,7 +9,7 @@ CREATE TABLE Productos (
 
 -- Creación de la tabla Usuario
 CREATE TABLE Usuario (
-    IdUsuario INT AUTO_INCREMENT PRIMARY KEY,
+    idUsuario INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50),
     contraseña VARCHAR(100),
     tipoUsuario BIT
