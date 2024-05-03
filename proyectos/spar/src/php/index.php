@@ -172,9 +172,8 @@
     $(document).ready(function() {
             
             $("#spar").click(function() {
-                window.location.href = "index.php";
+                location.reload();
             });
-
         $("#clickproductos").click(function() {
             $.ajax({
                 type: "POST",

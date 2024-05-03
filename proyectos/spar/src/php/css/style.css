@@ -4,6 +4,13 @@ html{
     padding: 0;
     font-family: Arial, sans-serif;
 }
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 #contenido {
     flex: 1;
     padding: 20px;
