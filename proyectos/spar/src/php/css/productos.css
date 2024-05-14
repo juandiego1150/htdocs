@@ -1,38 +1,52 @@
-/* Estilos generales para la tabla */
-table {
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centra horizontalmente */
+    margin:auto;
+    background-color: white;
+    margin-top:-20px;
+    max-width: 950px;
+}
+
+.producto {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.producto-imagen {
     width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+    height: auto;
+    border-radius: 8px;
 }
 
-/* Estilos para las celdas de la tabla */
-td, th {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
+.producto-nombre {
+    margin-top: 10px;
+    font-size: 20px;
 }
 
-/* Estilo para el encabezado de la tabla */
-th {
-    background-color: #f2f2f2;
-    color: #333;
+.producto-descripcion {
+    margin-top: 10px;
 }
 
-/* Estilo para cada fila impar */
-tr:nth-child(odd) {
-    background-color: #f9f9f9;
+.producto-precio {
+    margin-top: 10px;
+    font-size: 18px;
 }
 
-/* Estilo para las celdas de la primera columna (nombre del producto) */
-td:first-child {
-    font-weight: bold;
+.boton-comprar {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Estilo para las celdas de precio */
-td:last-child {
-    font-weight: bold;
-    color: #27ae60; /* Color verde para resaltar precios */
-}
-#productos {
-    display: none;
+.boton-comprar:hover {
+    background-color: #0056b3;
 }

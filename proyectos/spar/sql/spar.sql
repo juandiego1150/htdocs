@@ -31,3 +31,4 @@ CREATE TABLE Producto_Oferta (
     FOREIGN KEY (IdProducto) REFERENCES Productos(idProducto),
     FOREIGN KEY (IdOferta) REFERENCES Oferta(idOferta)
 );
+CREATE TABLE `spar`.`roles_usuario` (`id` INT NOT NULL , `nombre` INT(100) NOT NULL ) ENGINE = InnoDB;

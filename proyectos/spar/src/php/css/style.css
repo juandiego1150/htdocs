@@ -83,12 +83,46 @@ input[type="password"] {
     border-radius: 3px;
     margin-bottom: 10px;
 }
-#barraUtilidades{
+#barraUtilidades {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8f8f8;
+    background-color: #212121;
     height: 50px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #212121;
+    padding: 0 20px; /* Añade un espacio a cada lado de la barra */
 }
 
+#barraUtilidades .usuariobarra {
+    color: white;
+    text-decoration: none;
+    margin-left: auto; /* Mueve el usuario a la derecha */
+}
+
+#barraUtilidades .titulobarra {
+    color: #ffffff;
+    margin: 0 auto; /* Centra el título */
+}
+
+
+#alerta{
+    color: rgb(255, 0, 0);
+    padding: 10px;
+    z-index: 1000;
+}
+.usuariobarra {
+    display: flex;
+    align-items: center;
+}
+.usuariobarra img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#imagenUsuario {
+display: flex;
+}
+#spar{
+    cursor: pointer;
+}

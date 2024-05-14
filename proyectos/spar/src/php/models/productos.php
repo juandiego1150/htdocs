@@ -9,13 +9,11 @@ class Productos
         $consulta->execute();
         $resultado = $consulta->get_result();
         $consulta -> close();
-
+            // Array para almacenar los datos fuera del if por si no vienen productos
+        $productos = array();
              // Verificar si se obtuvieron resultados
         if ($resultado->num_rows > 0) 
         {
-            // Array para almacenar los datos
-            $productos = array();
-
             // Iterar sobre los resultados usando fetch_assoc()
             while ($row = $resultado->fetch_assoc()) 
             {
@@ -24,6 +22,5 @@ class Productos
             }  
         }
         return $productos;
-
     }
 }

@@ -1,51 +1,52 @@
-<head>
-    <title>Panel de Administrador</title>
-    <style>
-        /* Estilos CSS para el panel de administrador */
-        body {
-            font-family: Arial, sans-serif;
-        }
-        h1 {
-            text-align: center;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-    </style>
-</head>
-<body>
+<link rel="stylesheet" type="text/css" href="css/administrador.css">
     <h1>Panel de Administrador de Usuarios</h1>
     <table>
         <tr>
             <th>ID</th>
             <th>Nombre</th>
-            <th>Email</th>
             <th>Rol</th>
-            <th>Acciones</th>
         </tr>
         <!-- Aquí puedes agregar filas con información de usuarios -->
         <?php for($i=0;$i<count($usuarios);$i++){ ?>
             <tr>
                 <td><?php echo $usuarios[$i]['idUsuario']?></td>
                 <td><?php echo $usuarios[$i]['nombre']?></td>
-                <td>usuario1@example.com</td>
-                <td>Administrador</td>
                 <td>
-                    <button>Editar</button>
-                    <button>Eliminar</button>
+                    <button id="editar_<?php echo $usuarios[$i]['idUsuario']?>">Editar</button>
+                    <button id="eliminar_<?php echo $usuarios[$i]['idUsuario']?>">Eliminar</button>
                 </td>
             </tr>
             
-       <?php } ?>
+      
         <!-- Fin de filas de usuarios -->
-    </table>
-</body>
+<script>
+    // Código JavaScript para editar y eliminar usuarios
+    $(document).ready(function() {
+        // Editar usuario
+        $("#editar_<?php echo $usuarios[$i]['idUsuario']?>").click(function() {
+           
+        });
+        // Eliminar usuario
+        $("#eliminar_<?php echo $usuarios[$i]['idUsuario']?>").click(function() {
+            // Obtener el ID del usuario
+            var id = $(this).attr("id").split("_")[1];
+            // Enviar petición para eliminar el usuario
+            $.ajax({
+                type: "POST",
+                url: "controllers/usuarios.php",
+                data: {
+                    option: 12,
+                    id: id
+                },
+                success: function(a) {
+                    if (a == 1) {
+                        $("#adimistrador").trigger("click");
+                    } else {
+                        alert("Error al eliminar el usuario");
+                    }
+                }
+            });
+        });
+    });
+</script>
+<?php } ?>
