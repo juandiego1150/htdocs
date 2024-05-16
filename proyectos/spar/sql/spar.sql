@@ -31,4 +31,16 @@ CREATE TABLE Producto_Oferta (
     FOREIGN KEY (IdProducto) REFERENCES Productos(idProducto),
     FOREIGN KEY (IdOferta) REFERENCES Oferta(idOferta)
 );
-CREATE TABLE `spar`.`roles_usuario` (`id` INT NOT NULL , `nombre` INT(100) NOT NULL ) ENGINE = InnoDB;
+CREATE TABLE `spar`.`roles_usuario` (
+    `id` INT NOT NULL ,
+     `nombre` INT(100) NOT NULL
+      ) 
+      ENGINE = InnoDB;
+
+CREATE TABLE mensaje (
+     idMensaje INT PRIMARY KEY AUTO_INCREMENT,
+      idUsuario INT,
+       nombre TEXT,
+        mensaje TEXT,
+         FOREIGN KEY (idUsuario) REFERENCES usuario(idUsuario)
+          );
