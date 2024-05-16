@@ -209,7 +209,7 @@
         <section class="testimony__body" data-id="2">
             <div class="testimony__texts">
                 <h2 class="subtitle">Encuéntranos en <span class="testimony__course">Valverde de Leganés</span>.</h2>
-                <p class="testimony__review">Visítanos en nuestra sucursal en Valverde de Leganés para disfrutar de la mejor atención
+                <p class="testimony__review">Visítanos en nuestros establecimientos en Valverde de Leganés para disfrutar de la mejor atención
                     al cliente y una amplia selección de productos frescos y de calidad.</p>
             </div>
             <figure class="testimony__picture">
