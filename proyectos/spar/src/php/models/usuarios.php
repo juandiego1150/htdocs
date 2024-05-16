@@ -95,6 +95,7 @@ class Usuarios
     public static function eliminarUsuario($id)
     {
         global $con; // Acceder a la variable global $con
+        //BORRA EL USUARIO DE LA TABLA USUARIO
         $consulta = $con->prepare("DELETE FROM usuario WHERE idUsuario = ?");
         $consulta->bind_param("i", $id);
         $resultado = $consulta->execute();

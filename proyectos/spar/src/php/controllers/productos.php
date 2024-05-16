@@ -4,7 +4,7 @@ switch ($options) {
     case 1:
         require_once '../models/productos.php';
         $productos = Productos::listarProductos();
-        include '../views/productos.php'; 
+        include '../views/templates/productos.php'; 
         break;
     case 2:
         

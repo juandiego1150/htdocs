@@ -196,10 +196,8 @@
                     option: 5
                 },
                 success: function(a) {
-                    alert(a);
-                    location.reload();
                     $("#popupBody").html(a);
-                    openPopup();
+                    openPopup('register');
                 }
             });
         });

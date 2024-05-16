@@ -34,18 +34,49 @@ body {
     }
 
   /* Estilos para el pop-up */
-  #popup {
+ /* Estilos para el pop-up */
+#popup {
     display: none;
     position: fixed;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: #f9f9f9;
     padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
 }
+
+#popup h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+#popup p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+#popup button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#popup button:hover {
+    background-color: #0056b3;
+}
+
 #overlay {
     display: none;
     position: fixed;
@@ -54,8 +85,10 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 900; /* Asegúrate de que el overlay esté detrás del pop-up */
+    z-index: 900;
 }
+
+/*fin estilos popup*/
 
 /* registro.css */
 
@@ -124,5 +157,74 @@ input[type="password"] {
 display: flex;
 }
 #spar{
+    cursor: pointer;
+}
+/* ESTO DA ESTILO AL APARTADO DE TESTIMONIOS DE ESTUDIANTES */
+
+.testimony{
+    background-color:#cc0000ed;
+    color: #ffffff;
+}
+.testimony p {
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+.testimony h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.testimony__container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    align-items: center;
+}
+
+.testimony__body{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.testimony__body--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.testimony__img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.testimony__texts{
+    max-width: 700px;
+}
+
+.testimony__course{
+    background-color: #008000;
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+}
+
+.testimony__arrow{
+    width: 90%;
     cursor: pointer;
 }
