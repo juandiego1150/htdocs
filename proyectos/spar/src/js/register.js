@@ -10,12 +10,16 @@ $(document).ready(function() {
                 contraseña: $("#contraseñaRegistro").val()
             },
             success: function(a) {
-                $("#popupBody").html(a);
+                if (a === "1") {
+                $("#popupBody").html("Usuario registrado e iniciado correctamente");
                 openPopup('spar');
+                }else{
+                    $("#alerta").html(a);
+                }
             }
         });
     });
-
+    //login script
     $("#login").click(function() {
         $.ajax({
             type: "POST",

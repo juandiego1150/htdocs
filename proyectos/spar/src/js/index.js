@@ -85,6 +85,21 @@
                 }
             });
         });
+        //click en ofertas
+        $("#ofertas").click(function() {
+            $.ajax({
+                type: "POST",
+                url: "controllers/productos.php",
+                dataType: "Text",
+                data: {
+                    option: 2
+                },
+                success: function(a) {
+                    $("#contenido").html(a);
+                    animateContent();
+                }
+            });
+        });
         function animateContent() {
             $("#contenido").fadeIn(1000);
         }
@@ -143,6 +158,7 @@
                     $("#usuario").html(respuesta);
                 }
             });
+            
 
                   //POPUP SCRIPT
       document.getElementById('cerrar').addEventListener('click', function() {

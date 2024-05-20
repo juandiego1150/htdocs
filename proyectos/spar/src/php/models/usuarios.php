@@ -7,13 +7,24 @@ class Usuarios
     {
         // Obtener los datos del formulario
         global $con; // Acceder a la variable global $con
-        // Preparar la consulta
-        $consulta = $con->prepare("INSERT INTO usuario (nombre, contraseña, tipoUsuario) VALUES (?, ?, 2)");
-        $consulta->bind_param("ss", $nombre,$contraseña);
+        //recorre los usuarios para verificar que no se repitan
+        $consulta = $con->prepare("SELECT * FROM usuario WHERE nombre = ? ");
+        $consulta->bind_param("s", $nombre);
         $consulta->execute();
+        $resultado = $consulta->get_result();
         $consulta->close();
-        
-        return true;
+        if ($resultado->num_rows == 0) {
+        // Preparar la consulta
+            $consulta = $con->prepare("INSERT INTO usuario (nombre, contraseña, tipoUsuario) VALUES (?, ?, 2)");
+            $consulta->bind_param("ss", $nombre,$contraseña);
+            $consulta->execute();
+            $consulta->close();
+            
+            return true;
+        }else{
+            return false;
+        }
+       
 
     }
     public static function listarUsuarios()

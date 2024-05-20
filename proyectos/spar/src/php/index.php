@@ -117,6 +117,13 @@
 
         /* Media Queries */
         @media (max-width: 768px) {
+            .testimony__img {
+                
+            /* desaparecer imagen */
+            display: none;
+
+
+            }
             .logo {
                 font-size: 24px;
             }
@@ -130,6 +137,7 @@
                 left: 0;
                 background-color: #cc0000; /* Rojo SPAR */
             }
+
 
             nav ul.active {
                 display: flex;
