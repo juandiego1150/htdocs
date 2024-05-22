@@ -148,6 +148,11 @@ switch ($options) {
         //eliminamos un usuario
         require_once '../models/usuarios.php';
         $id = filter_input(INPUT_POST, "id", FILTER_SANITIZE_NUMBER_INT);
+        //solo eliminar si es administrador
+        session_start();
+        if ($_SESSION['tipoUsuario'] != 1) {
+            break;
+        }
         $eliminado = Usuarios::eliminarUsuario($id);
         if ($eliminado) {
             echo 1;
@@ -155,4 +160,56 @@ switch ($options) {
             echo 0;
         }
         break;
+        case 13:
+            // editar usuarios
+            require_once '../models/usuarios.php';
+            
+            $id = filter_input(INPUT_POST, "id", FILTER_SANITIZE_NUMBER_INT);
+            $nombre = filter_input(INPUT_POST, "nombre", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $contraseña = filter_input(INPUT_POST, "contraseña", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $rol = filter_input(INPUT_POST, "rol", FILTER_SANITIZE_NUMBER_INT);
+            
+            // solo editar si es administrador
+            session_start();
+            if ($_SESSION['tipoUsuario'] != 1) {
+                break;
+            }
+            
+            // obtener la lista de usuarios
+            $usuarios = Usuarios::listarUsuarios();
+            if ($usuarios == null || $usuarios == "") {
+                break;
+            }
+            
+            // controlar que el nombre introducido no coincida con el de otro usuario (excepto el propio)
+            $nombreDuplicado = false;
+            foreach ($usuarios as $usuario) {
+                if ($usuario['nombre'] == $nombre && $usuario['idUsuario'] != $id) {
+                    $nombreDuplicado = true;
+                    break;
+                }
+            }
+            if ($nombreDuplicado) {
+                break;
+            }
+            
+            // controlar que el rol sea 1 o 2
+            if ($rol != 1 && $rol != 2) {
+                break;
+            }
+            
+            // verificar que la contraseña y el nombre no estén vacíos
+            if (empty($contraseña) || empty($nombre)) {
+                break;
+            }
+
+            // editar usuario
+            $editado = Usuarios::editarUsuario($id, $nombre, $contraseña, $rol);
+            if ($editado) {
+                echo 1;
+            } else {
+                echo 0;
+            }
+            break;
+        
 }

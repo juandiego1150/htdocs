@@ -113,4 +113,13 @@ class Usuarios
         $consulta->close();
         return $resultado;
     }
+    public static function editarUsuario($id, $nombre, $contraseña, $rol)
+    {
+        global $con; // Acceder a la variable global $con
+        $consulta = $con->prepare("UPDATE usuario SET nombre = ?, contraseña = ?, tipoUsuario = ? WHERE idUsuario = ?");
+        $consulta->bind_param("ssii", $nombre, $contraseña, $rol, $id);
+        $resultado = $consulta->execute();
+        $consulta->close();
+        return $resultado;
+    }
 }

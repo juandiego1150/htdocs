@@ -151,6 +151,18 @@
 
             .menu-icon {
                 display: block;
+
+            }
+            .usuariobarra{
+                margin: auto;                
+            }
+            #imagenUsuario{
+                padding: 5px;
+            }
+        
+            #imagenUsuario {
+                margin-left: 8px;
+                margin-right: -12px;
             }
         }
 
@@ -185,7 +197,7 @@
                 <li id="register"><a href="#">Inicia sesión</a></li>
                 <li id="adimistrador"><a href="#">Administrador</a></li>
                 <div class="usuariobarra"> <li id="cerrarSesion"><a href="#">Cerrar sesión</a></li>
-                 <div id="imagenUsuario"><img  src="../img/usuario.png"></div><p id="usuario"></p></div>
+                <div id="imagenUsuario"><img  src="../img/usuario.png"></div><p id="usuario"></p></div>
 
             </ul>
         </nav>
