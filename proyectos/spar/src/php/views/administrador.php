@@ -20,7 +20,127 @@
                     <button id="eliminar_<?php echo $usuarios[$i]['idUsuario']?>">Eliminar</button>
                 </td>
             </tr>
-            
+            <style>
+                /* Estilos del encabezado */
+h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    background-color: #f4f4f9;
+}
+
+/* Estilos de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Estilos de las celdas de la tabla */
+td {
+    background-color: #f9f9f9;
+}
+
+/* Estilos de los botones de acción */
+button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos del menú desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #f9f9f9;
+    border: none;
+    width: 100%;
+    text-align: left;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content button:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilos de los inputs */
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Estilos de los botones de guardar y cancelar con php */
+#guardar_<?php echo $usuarios[$i]['idUsuario']?>,
+#cancelar_<?php echo $usuarios[$i]['idUsuario']?> {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#guardar_<?php echo $usuarios[$i]['idUsuario']?>:hover,
+#cancelar_<?php echo $usuarios[$i]['idUsuario']?>:hover {
+    background-color: #45a049;
+}
+
+            </style>
       
         <!-- Fin de filas de usuarios -->
 <script>
