@@ -1,4 +1,3 @@
-<div id="vistaProductos" class="productos-container">
     <?php foreach ($productos as $producto): ?>
         <div class="producto">
             <img src="<?php echo $producto['nombreimagen']; ?>" alt="<?php echo $producto['nombre']; ?>" class="producto-imagen">
@@ -8,4 +7,3 @@
             <button class="boton-comprar">Comprar</button>
         </div>
     <?php endforeach; ?>
-</div>

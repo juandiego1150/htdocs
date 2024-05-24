@@ -1,0 +1,119 @@
+/* Container */
+#unique-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Dropdown Styling */
+#unique-dropdown {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#unique-dropdown-title {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#unique-dropdown-content {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+}
+
+/* Arrow Styling */
+.unique-arrow {
+    transition: transform 0.3s ease;
+}
+
+/* Form Styling */
+#unique-form {
+    margin-bottom: 20px;
+}
+
+.unique-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.unique-input,
+.unique-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.unique-input:focus,
+.unique-textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.unique-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.unique-submit:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+.unique-submit:active {
+    transform: translateY(1px);
+}
+
+/* Alert Styling */
+#unique-alert {
+    margin-top: 10px;
+    color: red;
+    font-weight: bold;
+}
+
+/* Tablón Styling */
+#unique-tablon {
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#unique-tablon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #unique-form,
+    #unique-tablon {
+        padding: 15px;
+    }
+
+    .unique-label,
+    .unique-input,
+    .unique-textarea,
+    .unique-submit {
+        font-size: 14px;
+    }
+}

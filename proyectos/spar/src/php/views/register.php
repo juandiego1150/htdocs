@@ -1,21 +1,20 @@
-<link rel="stylesheet" type="text/css" href="css/registro.css">
-<script src="../js/register.js"></script>
 <div class="login-page">
-    <div class="form">
+    <div class="form-container">
         <!-- formulario de registro -->
-        <form class="register-form">
-            <input type="text" placeholder="name" id="nombreRegistro" />
-            <input type="password" placeholder="password" id="contraseñaRegistro" />
-            <button id="registrarse" onclick="event.preventDefault()">crear cuenta</button>
+        <form id="register-form" class="register-form">
+            <input type="text" placeholder="name" id="nombreRegistro" class="form-input" />
+            <input type="password" placeholder="password" id="contraseñaRegistro" class="form-input" />
+            <button id="registrarse" class="form-button" onclick="event.preventDefault()">crear cuenta</button>
             <p class="message">Ya estas registrado? <a href="#">Inicia sesion</a></p>
         </form>
         <!-- formulario de login -->
-        <form class="login-form">
-            <input type="text" placeholder="username" id="nombreLogin" />
-            <input type="password" placeholder="password" id="contraseñaLogin" />
-            <button id="login" onclick="event.preventDefault()">login</button>
+        <form id="login-form" class="login-form">
+            <input type="text" placeholder="username" id="nombreLogin" class="form-input" />
+            <input type="password" placeholder="password" id="contraseñaLogin" class="form-input" />
+            <button id="login" class="form-button" onclick="event.preventDefault()">login</button>
             <p class="message">No estas registrado? <a href="#">Crea una cuenta</a></p>
         </form>
         <div id="alerta"></div>
     </div>
 </div>
+<script src="../js/register.js"></script>

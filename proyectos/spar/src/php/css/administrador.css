@@ -1,2 +1,117 @@
-
 /* Estilos CSS para el panel de administrador */
+/* Estilos del encabezado */
+#administrador-h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    background-color: #f4f4f9;
+}
+
+/* Estilos de la tabla */
+#administrador-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+.administrador-th, .administrador-td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.administrador-th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Estilos de las celdas de la tabla */
+.administrador-td {
+    background-color: #f9f9f9;
+}
+
+/* Estilos de los botones de acción */
+.administrador-button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 14px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.administrador-button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos del menú desplegable */
+.administrador-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.administrador-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.administrador-dropdown-content .administrador-dropdown-button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #f9f9f9;
+    border: none;
+    width: 100%;
+    text-align: left;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.administrador-dropdown-content .administrador-dropdown-button:hover {
+    background-color: #ddd;
+}
+
+.administrador-dropdown:hover .administrador-dropdown-content {
+    display: block;
+}
+
+/* Estilos de los inputs */
+.administrador-input-text {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.administrador-input-text:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Estilos de los botones de guardar y cancelar con php */
+.administrador-save-button, .administrador-cancel-button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.administrador-save-button:hover, .administrador-cancel-button:hover {
+    background-color: #45a049;
+}

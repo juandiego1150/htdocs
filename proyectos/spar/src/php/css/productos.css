@@ -1,50 +1,65 @@
+/* Contenedor de productos */
 .productos-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center; /* Centra horizontalmente */
-    margin:auto;
+    margin: auto;
     background-color: white;
-    margin-top:-20px;
+    margin-top: -20px;
     max-width: 950px;
+    padding-bottom: 100px;
 }
 
+/* Estilo de cada producto */
 .producto {
-    width: 300px;
+    width: 250px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
     animation: fadeIn 0.5s ease-in-out; /* Aplicamos la animación fadeIn */
 }
 
+/* Animación fadeIn */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+/* Imagen del producto */
 .producto-imagen {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
+/* Nombre del producto */
 .producto-nombre {
     margin-top: 10px;
     font-size: 20px;
+    color: var(--main-text-color);
 }
 
+/* Descripción del producto */
 .producto-descripcion {
     margin-top: 10px;
+    font-size: 1em;
+    color: #666;
 }
 
+/* Precio del producto */
 .producto-precio {
     margin-top: 10px;
     font-size: 18px;
+    font-weight: bold;
+    color: #077b0d;
 }
 
+/* Botón de comprar */
 .boton-comprar {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: var(--accent-color);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -54,4 +69,77 @@
 
 .boton-comprar:hover {
     background-color: #0056b3;
+}
+
+/* Contenedor de filtros */
+.filter-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-container form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.filter-group {
+    flex: 1 1 30%;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.filter-group input,
+.filter-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Variables CSS */
+:root {
+    --main-bg-color: #f4f4f4;
+    --main-text-color: #333;
+    --accent-color: #3498db;
+    --highlight-color: #27ae60;
+}
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .producto {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .producto {
+        width: 100%;
+    }
+}
+
+/* Animaciones adicionales */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.producto:hover .producto-imagen {
+    animation: shake 0.5s;
 }

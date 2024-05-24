@@ -10,7 +10,10 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
+
 #contenido {
     flex: 1;
     padding: 20px;
@@ -33,7 +36,6 @@ body {
         background-color: #397f3d;
     }
 
-  /* Estilos para el pop-up */
  /* Estilos para el pop-up */
 #popup {
     display: none;
@@ -110,11 +112,15 @@ label {
 
 input[type="text"],
 input[type="password"] {
-    width: 200px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 10px;
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 #barraUtilidades {
     display: flex;
@@ -164,6 +170,10 @@ display: flex;
 .testimony{
     background-color:#cc0000ed;
     color: #ffffff;
+    /*redondear esquinas*/
+    border-radius: 10px;
+    /*sombra a la caja*/
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 .testimony p {
     font-size: 1.5em;
@@ -227,4 +237,384 @@ display: flex;
 .testimony__arrow{
     width: 90%;
     cursor: pointer;
+}
+.testimony__arrow:hover{
+    transform: scale(1.1);
+}
+/* Reset */
+* {
+  
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    background-color: #cc0000; /* Rojo SPAR */
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul {
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+/* Banner */
+.banner {
+    background-color: #008000; /* Verde SPAR */
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+}
+
+.banner p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.banner button {
+    background-color: #fff;
+    color: #008000; /* Verde SPAR */
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.banner button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #005500; /* Verde SPAR más oscuro */
+}
+
+
+/* Sobre nosotros */
+.sobre-nosotros {
+    background-color: #ffffff00; /* Blanco */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.sobre-nosotros h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+    margin-top: -10px;
+}
+
+.sobre-nosotros p {
+    font-size: 20px;
+    line-height: 1.8;
+    /* negrita */
+    font-weight: bold;
+/*fin sobre nosotros*/
+}
+  nav ul li a:hover {
+    color: #008000; /* Verde SPAR */
+}
+
+/* Footer */
+footer {
+    background-color: #cc0000; /* Rojo SPAR */
+    color: #fff;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .testimony__img {
+        
+    /* desaparecer imagen */
+    display: none;
+    }
+    .testimony__review{
+        max-width: 70%;
+    }
+  
+    .logo {
+        font-size: 24px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #cc0000; /* Rojo SPAR */
+    }
+
+
+    nav ul.active {
+        display: flex;
+        z-index: 1000;
+    }
+
+    nav ul li {
+        margin: 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+
+    }
+    .usuariobarra{
+        margin: auto;                
+    }
+    #imagenUsuario{
+        padding: 5px;
+    }
+
+    #imagenUsuario {
+        margin-left: 8px;
+        margin-right: -12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .banner h1 {
+        font-size: 24px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+}
+/* Estilos para la sección de Ofertas */
+#ofertasIndex {
+    padding: 50px;
+    background-color: #f9f9f9;
+    padding-top: 100px;
+    text-align: center; /* Centra el contenido */
+}
+
+#ofertasIndex h2 {
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    color: #333; /* Color del texto */
+}
+
+.offer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.offer {
+    width: calc(33.33% - 20px);
+    height: 400px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff8f;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.05s ease;
+}
+
+.offer:hover {
+    transform: scale(1.05);
+    color: #ffffff; /* Color del texto */
+    background-color: #000000;
+    font-weight: bold; /* Negrita */
+}
+
+.offer img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.offer h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.offer p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Media queries para hacer la sección responsive */
+@media (max-width: 1200px) {
+    .offer {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .offer {
+        width: calc(100% - 20px);
+    }
+}
+
+
+/* Estilos para la sección de Contacto */
+#contacto {
+    padding: 50px 0;
+    background-color: #ffffff00;
+}
+
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-info ul li strong {
+    font-weight: bold;
+}
+
+/* Estilos para la sección de Historia */
+#historia {
+    background-image: url("../../img/valverde.png"); /* Imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el contenedor */
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+    border-radius: 20px; /* Añade bordes redondeados */
+}
+
+.overlay_historia {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 0, 0.757); /* Verde SPAR con transparencia */
+    border-radius: 20px; /* Añade bordes redondeados */
+}
+
+.history {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 20px; /* Añade un poco de espacio alrededor del contenido */
+}
+
+.history img {
+    max-width: 100%;
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.history p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Espacio entre párrafos */
+}
+.history h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+    margin-top: -10px;
+}
+
+/*css para video de fondo*/
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+    /*darle desenfoque al video*/
+    filter: blur(10px);
+    /* poner el video de color verde */
+}
+#degradadoVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    background: rgba(255, 255, 255, 0.237);
 }
